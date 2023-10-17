@@ -894,3 +894,24 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.main-section {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../img/Soluciones.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (max-width: 1200px) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(../img/soluciones480.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

@@ -2,16 +2,31 @@
   background-color: $secon-color;
   .container.foot {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 70px;
+    @media (max-width: 1200px) {
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+    }
     .contact__list {
       list-style: none;
       padding-top: 60px;
       padding-bottom: 60px;
+      @media (max-width: 1200px) {
+        justify-content: center;
+      }
+      @media (max-width: 768px) {
+        margin-left: 80px;
+      }
     }
     .contact__item {
       display: flex;
       padding-bottom: 15px;
+      @media (max-width: 1200px) {
+        justify-content: center;
+      }
       .logo {
         color: $brand-color;
         text-decoration: none;
@@ -47,6 +62,9 @@
       display: flex;
       flex-direction: column;
       gap: 0%;
+      @media (max-width: 1200px) {
+        margin-left: 120px;
+      }
     }
     .footer__text {
       margin-top: 0%;
@@ -91,6 +109,13 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @media (max-width: 1200px) {
+      margin-left: 150px;
+      margin-bottom: 60px;
+    }
+    @media (max-width: 768px) {
+      margin-left: 50px;
+    }
   }
   .boletin__text {
     margin-top: 0%;
@@ -102,9 +127,16 @@
     line-height: normal;
     letter-spacing: 0.42px;
     text-transform: uppercase;
+    @media (max-width: 1200px) {
+      text-align: center;
+    }
   }
   .formulario__div {
     display: flex;
+    @media (max-width: 1200px) {
+      align-items: center;
+      flex-direction: column;
+    }
   }
   .formulario__email {
     width: 358px;
@@ -124,6 +156,9 @@
     height: 50px;
     border-radius: 4px;
     background: $brand-color;
+    @media (max-width: 1200px) {
+      margin-top: 20px;
+    }
   }
   .subscribe__text {
     color: $white-color;

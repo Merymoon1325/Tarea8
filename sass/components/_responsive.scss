@@ -1,3 +1,39 @@
+@media (max-width: 1200px) {
+  .container {
+    width: 768px;
+  }
+  .header-icon__email {
+    margin: 0px 8px 0px 20px;
+  }
+  .header-icon__tel {
+    margin-right: 12px;
+  }
+  .services {
+    display: none;
+  }
+  .services__list {
+    display: none;
+  }
+  .team__img {
+    width: 354px;
+    height: 374px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 480px;
+  }
+  .header__list {
+    display: none;
+  }
+  .header .header-navegation__list {
+    display: none;
+  }
+  .team__img {
+    width: 450px;
+    height: 460px;
+  }
+}
 .menu-toggle {
   min-height: 40px;
   min-width: 40px;
@@ -11,6 +47,15 @@
   border: none;
   border-radius: 50%;
   outline: none;
+  @media (max-width: 768px) {
+    display: block;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    position: absolute;
+    right: 15px;
+    top: 23px;
+  }
   &:hover {
     background-color: rgba(0, 0, 0, 0.1);
   }
@@ -32,11 +77,14 @@
   width: 100vw;
   height: 100vh;
   padding: 32px;
-  background-color: #3f51b5;
+  background-color: white;
   z-index: 999;
-
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
+  @media (max-width: 768px) {
+    display: block;
+    cursor: pointer;
+  }
 }
 
 .menu-container.is-open {
@@ -51,14 +99,92 @@
 }
 
 .mobile-menu {
+  margin-top: 48px;
+  margin-left: 40px;
   padding: 0;
-  margin: 0;
   list-style: none;
+  margin-bottom: 200px;
 }
 
 .mobile-menu .link {
   display: block;
   padding: 10px;
-  color: #fff;
   text-decoration: none;
+  color: #212121;
+  font-family: Roboto;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  &:hover {
+    color: $brand-color;
+  }
+}
+.link-mobile {
+  color: #2196f3;
+  font-family: Roboto;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.68px;
+}
+.mobile-list__social {
+  display: flex;
+}
+.mobile-item__social {
+  color: rgb(33, 150, 243);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 122.222% */
+  letter-spacing: 0.36px;
+}
+.mobile__social {
+  color: rgb(33, 150, 243);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 122.222% */
+  letter-spacing: 0.36px;
+}
+.mobile__social--guion-none::after {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 22px;
+}
+.mobile-item__social--guion::after {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 22px;
+  background: rgba(33, 33, 33, 0.2);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.mobile-list__social {
+  margin-top: 20px;
+}
+.mobile-item__info {
+  margin-top: 20px;
+}
+
+.menu-toggle:hover {
+  color: $brand-color;
+}
+.menu-toggle:focus {
+  color: $brand-color;
+}
+.menu-toggle.js-close-menu:hover {
+  fill: $brand-color;
+}
+.menu-toggle.js-close-menu:focus {
+  fill: $brand-color;
+}
+.menu-toggle.js-close-menu:focus-within {
+  fill: $brand-color;
 }

@@ -3,6 +3,7 @@
   justify-content: center;
 }
 .main-section {
+  justify-content: center;
   @include flexjustify("center", "flex");
   flex-wrap: wrap;
   width: auto;
@@ -16,6 +17,28 @@
     url(../img/Soluciones.png);
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media (max-width: 1200px) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(../img/soluciones768.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @media (max-width: 768px) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(../img/soluciones480.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   .main__title {
     color: $white-color;
     font-family: "Roboto", sans-serif;
@@ -26,8 +49,16 @@
     font-size: 44px;
     margin: 0px;
     padding-top: 200px;
-    padding-left: 250px;
-    padding-right: 250px;
+    width: 696px;
+    // margin-left: 235px;
+    // padding-left: 200px;
+    // padding-right: 100px;
+
+    @media (max-width: 1200px) {
+      font-size: 26px;
+      width: 360px;
+      // margin-left: 185px;
+    }
   }
   .main__div {
     @include flexjustify("center", "flex");
@@ -49,4 +80,9 @@
       cursor: pointer;
     }
   }
+}
+.div-soluciones {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }

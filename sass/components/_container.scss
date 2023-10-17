@@ -1,5 +1,27 @@
+// Mas de 1200
 .container {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @media (max-width: 1200px) {
+    width: 768px;
+  }
+  // Menos de  768
+  @media (max-width: 768px) {
+    width: 480px;
+  }
+}
+
+.menu-container {
+  display: none;
+}
+.menu-toggle {
+  display: none;
+}
+.list-none {
+  list-style: none;
+}
+.link-mobile {
+  text-decoration: none;
 }
